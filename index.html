@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engineering Student | Delta University</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #e5e7eb;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 6, 23, 0.75);
+      z-index: -1;
+    }
+
+    header {
+      background-color: rgba(2, 6, 23, 0.9);
+      border-bottom: 1px solid #1e293b;
+      padding: 20px 40px;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header h1 {
+      font-size: 22px;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .faculty-logo {
+      height: 65px;
+      transition: transform 0.4s ease;
+    }
+
+    .faculty-logo:hover {
+      transform: scale(1.1);
+    }
+
+    .logos {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logos img {
+      height: 55px;
+      width: auto;
+      filter: brightness(0.95);
+    }
+
+    header h1 {
+      font-size: 22px;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 60px;
+      background-color: rgba(2, 6, 23, 0.9);
+      border-radius: 20px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+      animation: fadeUp 1.2s ease forwards;
+    }
+
+    .profile {
+      text-align: center;
+      margin-bottom: 50px;
+      animation: slideDown 1s ease forwards;
+    }
+
+    .profile h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #38bdf8;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    .avatar {
+      width: 160px;
+      height: 160px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #38bdf8;
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+      animation: slideDown 1s ease forwards;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .logos {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .logos img {
+      height: 60px;
+      filter: brightness(0.9);
+      transition: transform 0.4s ease, filter 0.4s ease;
+    }
+
+    .logos img:hover {
+      transform: scale(1.1);
+      filter: brightness(1.1);
+    }
+
+    .profile h3 {
+      font-size: 18px;
+      font-weight: 400;
+      color: #94a3b8;
+      margin-bottom: 30px;
+    }
+
+    .info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 18px;
+      padding: 30px;
+      transform: translateY(40px);
+      opacity: 0;
+      animation: fadeUp 1s ease forwards;
+      transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(56, 189, 248, 0.25);
+      border-color: #38bdf8;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.3s; }
+    .card:nth-child(2) { animation-delay: 0.6s; }
+    .card:nth-child(3) { animation-delay: 0.9s; }
+
+    .card h4 {
+      margin-bottom: 10px;
+      color: #38bdf8;
+      font-size: 18px;
+    }
+
+    .card p {
+      color: #cbd5f5;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+  @keyframes fadeUp {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <h1>Faculty of Engineering – Delta University</h1>
+      <img src="engineering-logo.png" alt="Faculty of Engineering Logo" class="faculty-logo">
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="profile">
+      <div class="avatar">
+        <!-- Replace with your personal photo -->
+        <img src="profile.jpg" alt="Ahmed Mohamed Ahmed">
+      </div>
+      <h2>Ahmed Mohamed Ahmed</h2>
+      <h3>Engineering Student | Level 0</h3>
+    </div>
+
+    <div class="info">
+      <div class="card">
+        <h4>Personal Information</h4>
+        <p>
+          Full Name: Ahmed Mohamed Ahmed<br>
+          University ID: 12510768<br>
+          Age: 19 Years Old<br>
+          Academic Level: Level 0
+        </p>
+      </div>
+
+      <div class="card">
+        <h4>Academic Ambition</h4>
+        <p>
+          I aspire to join the Mechatronics Engineering Department at the Faculty of Engineering,
+          Delta University. Mechatronics has been my passion for many years as it combines mechanics,
+          electronics, and intelligent systems into one powerful field.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4>Practical Experience</h4>
+        <p>
+          Currently, I work in printer maintenance and repair. This experience has helped me develop
+          strong technical skills, problem-solving abilities, and hands-on understanding of
+          electromechanical systems.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 | Engineering Student – Delta University
+  </footer>
+
+</body>
+</html>
+
